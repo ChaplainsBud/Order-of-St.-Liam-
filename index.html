@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order of St. Liam</title>
+  <meta
+    name="description"
+    content="The Order of St. Liam is a simple path of prayer, communion, pilgrimage, charity, and care for the whole of Creation in the life of the Church."
+  />
+
+  <style>
+    :root {
+      --stone: #efe9dd;
+      --deep-green: #1f3d32;
+      --moss: #446b55;
+      --gold: #c79d4b;
+      --ink: #222222;
+      --muted: #5e5e5e;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background: var(--stone);
+      line-height: 1.6;
+    }
+
+    header {
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 1.5rem;
+      background:
+        linear-gradient(rgba(31, 61, 50, 0.72), rgba(31, 61, 50, 0.82)),
+        radial-gradient(circle at top, rgba(199, 157, 75, 0.22), transparent 38%),
+        var(--deep-green);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .hero {
+      max-width: 850px;
+    }
+
+    .eyebrow {
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-size: 0.82rem;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 8vw, 6rem);
+      line-height: 0.95;
+      margin: 0 0 1.25rem;
+      font-weight: 500;
+    }
+
+    .subtitle {
+      font-size: clamp(1.2rem, 2.5vw, 1.7rem);
+      max-width: 720px;
+      margin: 0 auto 2rem;
+      color: #f7f1e6;
+    }
+
+    .hero-card {
+      margin: 2.5rem auto 0;
+      padding: 1.25rem;
+      max-width: 640px;
+      border: 1px solid rgba(239, 233, 221, 0.35);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(4px);
+      font-size: 1.05rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+      font-family: Arial, sans-serif;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      border: 1px solid rgba(255, 255, 255, 0.45);
+      padding: 0.65rem 1rem;
+      border-radius: 999px;
+      transition: 0.2s ease;
+    }
+
+    nav a:hover {
+      background: var(--white);
+      color: var(--deep-green);
+    }
+
+    main {
+      width: min(1100px, calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    section {
+      padding: 5rem 0;
+      border-bottom: 1px solid rgba(31, 61, 50, 0.16);
+    }
+
+    h2 {
+      color: var(--deep-green);
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.1;
+      margin: 0 0 1rem;
+      font-weight: 500;
+    }
+
+    .lead {
+      font-size: 1.25rem;
+      max-width: 760px;
+      color: #343434;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: 18px;
+      padding: 1.5rem;
+      box-shadow: 0 10px 30px rgba(31, 61, 50, 0.08);
+      border: 1px solid rgba(31, 61, 50, 0.08);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: var(--moss);
+      font-size: 1.35rem;
+    }
+
+    .rule {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 0.75rem;
+    }
+
+    .quote {
+      font-size: clamp(1.45rem, 3vw, 2.3rem);
+      color: var(--deep-green);
+      line-height: 1.25;
+      margin: 0;
+    }
+
+    .small {
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.95rem;
+    }
+
+    .closing {
+      text-align: center;
+      padding: 5rem 1.5rem;
+    }
+
+    .closing p {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 720px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 800px) {
+      header {
+        min-height: auto;
+      }
+
+      .grid,
+      .rule {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 3.5rem 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="hero">
+      <p class="eyebrow">Prayer • Pilgrimage • Communion</p>
+      <h1>Order of St. Liam</h1>
+      <p class="subtitle">
+        A simple path of prayer, charity, attention, and service for those seeking deeper communion
+        with God, the Church, and the whole of Creation.
+      </p>
+
+      <div class="hero-card">
+        We are beginning quietly: with a rule of life, a love for the Church, and a desire to become
+        people who receive the world as gift and answer it with prayer, mercy, and care.
+      </div>
+
+      <nav aria-label="Page sections">
+        <a href="#vision">Vision</a>
+        <a href="#way">The Way</a>
+        <a href="#rule">Rule of Life</a>
+        <a href="#beginning">Beginning</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="vision">
+      <h2>A life turned toward communion</h2>
+      <p class="lead">
+        The Order of St. Liam exists to help ordinary Christians enter more deeply into communion:
+        with God in prayer, with the Church in worship, with neighbors in mercy, and with Creation
+        in reverent care.
+      </p>
+      <p>
+        St. Liam is remembered through St. William of Perth and Rochester: a baker, pilgrim, and
+        servant of the poor. His witness points us toward a life of daily prayer, shared bread,
+        pilgrimage, and care for those who might otherwise be forgotten.
+      </p>
+    </section>
+
+    <section id="way">
+      <h2>The way we are learning</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Prayer</h3>
+          <p>
+            We return to God through daily prayer, Scripture, silence, repentance, and thanksgiving.
+            Prayer is not escape from the world; it is learning to see the world truthfully.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Charity</h3>
+          <p>
+            We learn mercy through ordinary acts of care: feeding, welcoming, listening, forgiving,
+            and refusing to forget those who are easily overlooked.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Church</h3>
+          <p>
+            We seek communion within the life of the Church: worship, sacraments, humility,
+            accountability, forgiveness, and service.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="rule">
+      <div class="rule">
+        <div>
+          <h2>A simple rule of life</h2>
+          <p>
+            The first form of the Order is intentionally small. Before programs, platforms, or public
+            work, there is a pattern of life.
+          </p>
+        </div>
+
+        <div class="card">
+          <ul>
+            <li>Pray daily, even briefly.</li>
+            <li>Worship with the Church.</li>
+            <li>Practice silence before speech.</li>
+            <li>Share bread and ordinary help.</li>
+            <li>Honor Creation as gift.</li>
+            <li>Confess, forgive, and begin again.</li>
+            <li>Serve without needing attention.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="beginning">
+      <p class="quote">
+        “We are not trying to appear holy. We are learning to become whole.”
+      </p>
+      <p class="small">
+        This website is an early marker: a small public sign of a path that will grow slowly,
+        carefully, and honestly.
+      </p>
+    </section>
+  </main>
+
+  <div class="closing">
+    <h2>For now, simply know we have begun.</h2>
+    <p class="lead">
+      The Order of St. Liam is taking shape as a way of prayer, communion, charity, and care for
+      the whole life of the world in Christ.
+    </p>
+  </div>
+
+  <footer>
+    <p>Order of St. Liam • A beginning in prayer, pilgrimage, and communion</p>
+  </footer>
+</body>
+</html>
